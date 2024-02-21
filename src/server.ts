@@ -5,6 +5,7 @@ if (env.error) {
     process.exit(1);
 }
 
+import "reflect-metadata";
 import fastify from 'fastify';
 import { root } from './routes/root.js';
 import { isInteger } from './utils.js';
