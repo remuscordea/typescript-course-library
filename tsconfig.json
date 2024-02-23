@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-  "target": "ES2017",
-  "outDir": "dist",
-  "module": "Node16",
-  "experimentalDecorators": true,
-  "emitDecoratorMetadata": true
+    "target": "ES5",
+    "outDir": "dist",
+    "module": "Node16",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
