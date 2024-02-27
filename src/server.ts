@@ -20,16 +20,12 @@ import { updateCourse } from "./routes/update-course.js";
 import { createCourse } from "./routes/create-course.js";
 import { deleteCourseAndLessons } from "./routes/delete-course.js";
 
+let port = 3000;
 const portEnv = process.env.PORT;
-const portArg = process.argv[2];
-let port: number;
+const host = process.env.HOST;
 
 if (isInteger(portEnv)) {
   port = parseInt(portEnv);
-} else if (isInteger(portArg)) {
-  port = parseInt(portArg);
-} else {
-  port = 3000;
 }
 
 AppDataSource.initialize()
@@ -54,7 +50,7 @@ AppDataSource.initialize()
     server.setErrorHandler(defaultErrorHandler);
 
     // Start server
-    server.listen({ port }, (error, address) => {
+    server.listen({ port, host }, (error, address) => {
       if (error) {
         logger.error(error);
         process.exit(1);

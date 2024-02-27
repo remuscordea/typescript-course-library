@@ -1,6 +1,15 @@
 FROM node:slim
+
 WORKDIR /app
-COPY . /app
+
+COPY package.json .
+
 RUN npm install
-EXPOSE 9000
+
+COPY . .
+
+ENV PORT 9000
+
+EXPOSE $PORT
+
 CMD npm run dev
