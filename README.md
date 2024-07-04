@@ -1,4 +1,4 @@
-# A Node.js Courses Library API System
+# A Node.js Course Library API System
 
 This **Node.js** project is focused on building a **REST API** designed to manage courses within a library setting. Developed entirely in **Typescript**, the API leverages the **TypeORM** framework to facilitate seamless interaction between the application logic and a **PostgreSQL** database.
 
